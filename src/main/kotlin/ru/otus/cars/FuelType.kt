@@ -1,4 +1,6 @@
 package ru.otus.cars
 
-class FuelType {
+enum class FuelType {
+    PETROL,
+    LPG
 }

@@ -36,6 +36,7 @@ object Togliatti : CarFactory {
         return when (builder) {
             is Vaz2107.Companion -> return buildVaz2107(plates)
             is Vaz2108.Companion -> return buildVaz2108(plates)
+
         }
     }
 }

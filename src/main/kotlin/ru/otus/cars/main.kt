@@ -16,6 +16,18 @@ fun main() {
     techChecks()
     println("\n===> Taz...")
     println(Taz.color)
+
+    val vaz3 = Togliatti.buildCar(Vaz2107, Car.Plates("123", 77))
+    val vaz4 = Togliatti.buildCar(Vaz2108, Car.Plates("321", 78))
+    val taz5 = Taz
+    val fillingStation = FillingStation
+    println("1------------------------------------------------------------------")
+    fillingStation.fillingFuel(vaz3, 30)
+    println( vaz3.carOutput.getFuelLevel())
+    println("2------------------------------------------------------------------")
+    fillingStation.fillingFuel(vaz4, 30)
+    println("3------------------------------------------------------------------")
+    fillingStation.fillingFuel(taz5, 30)
 }
 
 fun driveCars() {

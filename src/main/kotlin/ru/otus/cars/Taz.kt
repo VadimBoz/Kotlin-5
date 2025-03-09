@@ -6,7 +6,7 @@ object Taz: Car {
      */
     override val plates: Car.Plates
         get() = throw NotImplementedError("Номера сняты")
-
+    val fuelSystem: FuelSystem = FuelSystem(FuelType.PETROL)
     /**
      * Цвет машины
      */
@@ -17,6 +17,9 @@ object Taz: Car {
      */
     override val carOutput: CarOutput
         get() = throw NotImplementedError("Приборов нет")
+
+    override val tankMouth: TankMouth
+        get() = fuelSystem.tankMouth
 
     /**
      * Получить оборудование
@@ -36,4 +39,10 @@ object Taz: Car {
     override fun wheelToLeft(degrees: Int) {
         throw NotImplementedError("Руля нет")
     }
+
+    override fun startRefueling(volume: Int) {
+        throw NotImplementedError("byh.....")
+    }
+
+
 }

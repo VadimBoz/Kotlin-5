@@ -74,5 +74,17 @@ class Vaz2107 private constructor(color: String) : VazPlatform(color) {
         override fun getCurrentSpeed(): Int {
             return this@Vaz2107.currentSpeed
         }
+
+        override fun getFuelLevel(): Int {
+            return this@Vaz2107.engine.fuelSystem.tank.currentVolume
+        }
+
+        override fun getStatusEngine(): Boolean {
+            return this@Vaz2107.engine.isStarted
+        }
+
+        override fun getTypeFuel(): FuelType {
+            return this@Vaz2107.engine.fuelSystem.fuelType
+        }
     }
 }
